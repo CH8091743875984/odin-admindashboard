@@ -1,29 +1,40 @@
+* {
+    margin:0;
+    padding:0;
+}
+
 .container {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr
+    grid-template: auto 4fr / 1fr 4fr
 }
 
 .header {
-    border-bottom: 1px solid black;
+    box-shadow: 0px 3px 3px 0px lightgrey;
     grid-column: 2 / 3;
-
     display: grid;
     grid-template: 2fr 3fr / 3fr 2fr
+
+
 }
 
 .sidebar {
     background-color: rgb(108, 185, 182);
     color: white;
     grid-row: 1 / 3;
-
     display: grid;
     grid-template: repeat(9, 40px) / 40px 200px;
 }
 
-.sidebar>img {
+.sidebar>img  {
     width: 25px;
     height: 25px;
-    
+}
+
+object {
+    color: white;
+
+    width: 25px;
+    height: 25px;
 }
 
 .search {
@@ -70,48 +81,89 @@
 .greeting .salutation {
     grid-column: 2 / 3 ;
     grid-row: 1 / 2;
+
+    font-weight: bold;
+    font-size: .6rem;
+
 }
 
 .greeting .my-name {
     grid-column: 2 / 3 ;
     grid-row: 2 / 3;
+
+    font-weight: bold;
+
 }
 
 .content {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.452);
     gap: 10px;
     padding: 10px;
 }
+
+
 
 .your-projects {
     grid-row: 1/3;
     gap: 10px;
 
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template: auto repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.projects-header {
+    grid-column: 1/3;
+    padding-top: 10px;
+    font-weight: bold;
+
 }
 
 .project {
     background-color: white;
     border-left: 7px solid gold;
     border-radius: 10px;
+    padding: 20px 10px;
+
+    display: grid;
+    grid-template-rows: auto 3fr 1fr;
+
+
+
 }
 
-.project>img {
+.project-title {
+    font-weight: bold;
+}
+
+.project-buttons>img {
     width:25px;
     height:25px;
 }
 
+.project-buttons {
+    justify-self: right;
+}
 
+.announcements-content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.announcements-header {
+    grid-row: 1 / 2;
+    padding: 10px 0px;
+    font-weight: bold;
+
+}
 
 .announcements {
-    grid-row: 1 / 2;
-    grid-column: 2 /3;
+    grid-row: 2 / 3;
     background-color: white;
     padding: 20px;
     display: grid;
+    border-radius: 10px;
 }
 
 .announcements > :not(:last-child) {
@@ -123,11 +175,43 @@
 }
 
 .announcement-title {
-    
+    font-weight: bold;
+}
+
+.trending-content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.trending-header {
+    padding: 10px 0px;
+    font-weight: bold;
+
 }
 
 .trending {
     grid-row: 2 / 3;
-    grid-column: 2 /3;
     background-color: white;
+
+    display: grid;
+    border-radius: 10px;
+}
+
+.trending-profile {
+    display: grid;
+    grid-template: auto 1fr / 50px 1fr;
+}
+
+.trending-profile-icon {
+    grid-column: 1/2;
+    grid-row: 1/3;
+ 
+}
+
+.trending-profile-handle {
+    font-weight: bold;
+}
+
+.project, .trending, .announcements {
+    box-shadow: 3px 3px 5px lightgrey;
 }

@@ -16,11 +16,19 @@
             </div>
             <div class="profile">
                 <img src="icons/bell-ring-outline.svg" />
-                <img class="profile-icon" />
+                <div class="profile-icon">
+                    <svg width="100%" height="100%">
+                        <circle cx="50%" cy="50%" r="30%" stroke="black" stroke-width="3" fill="red" />
+                    </svg>
+                </div>
                 <div>My Name</div>
             </div>
             <div class="greeting">
-                <div class="profile-icon">X</div>
+                <div class="profile-icon">
+                    <svg width="100%" height="100%">
+                        <circle cx="50%" cy="50%" r="20%" stroke="black" stroke-width="3" fill="red" />
+                    </svg>
+                </div>
                 <div class="salutation">Hi there,</div>
                 <div class="my-name">My Name (@myname)</div>
             </div>
@@ -33,7 +41,10 @@
         
         <div class="sidebar">
             <!-- buttons? -->
-            <img src="icons/star.svg">
+            <!-- <img src="icons/star.svg"> -->
+            <object data="icons/star.svg" type="image/svg+xml"></object>
+
+
             <div>Dashboard</div>
             <img src="icons/home.svg" />
             <div>Home</div>
@@ -56,83 +67,118 @@
         </div>
         <div class="content">
             <div class="your-projects">
+                <div class="projects-header">Your Projects</div>
                 <div class="project">
                     <div class="project-title">Website Redesign</div>
                     <div class="project-description">We're not in 1988 anymore, right?</div>
-                    <img src="icons/star-plus-outline.svg" />
-                    <img src="icons/eye-plus-outline.svg" />
-                    <img src="icons/source-fork.svg" />
+                    <div class="project-buttons">
+                        <img src="icons/star-plus-outline.svg" />
+                        <img src="icons/eye-plus-outline.svg" />
+                        <img src="icons/source-fork.svg" />
+                    </div>
                 </div>
                 <div class="project">
                     <div class="project-title">Training rewrite</div>
                     <div class="project-description">The importance of education</div>
-                    <img src="icons/star-plus-outline.svg" />
-                    <img src="icons/eye-plus-outline.svg" />
-                    <img src="icons/source-fork.svg" />
+                    <div class="project-buttons">
+                        <img src="icons/star-plus-outline.svg" />
+                        <img src="icons/eye-plus-outline.svg" />
+                        <img src="icons/source-fork.svg" />
+                    </div>
                 </div>
                 <div class="project">
                     <div class="project-title">Warehouse Expansion</div>
                     <div class="project-description">Make hole in wall, pour concrete, double warehouse size.</div>
-                    <img src="icons/star-plus-outline.svg" />
-                    <img src="icons/eye-plus-outline.svg" />
-                    <img src="icons/source-fork.svg" />
+                    <div class="project-buttons">
+                        <img src="icons/star-plus-outline.svg" />
+                        <img src="icons/eye-plus-outline.svg" />
+                        <img src="icons/source-fork.svg" />
+                    </div>
                 </div>
                 <div class="project">
                     <div class="project-title">Landscaping</div>
                     <div class="project-description">Beautify the courtyard</div>
-                    <img src="icons/star-plus-outline.svg" />
-                    <img src="icons/eye-plus-outline.svg" />
-                    <img src="icons/source-fork.svg" />
+                    <div class="project-buttons">
+                        <img src="icons/star-plus-outline.svg" />
+                        <img src="icons/eye-plus-outline.svg" />
+                        <img src="icons/source-fork.svg" />
+                    </div>
                 </div>
                 <div class="project">
                     <div class="project-title">Expansion into Europe</div>
                     <div class="project-description">They really want to buy our stuff</div>
-                    <img src="icons/star-plus-outline.svg" />
-                    <img src="icons/eye-plus-outline.svg" />
-                    <img src="icons/source-fork.svg" />
+                    <div class="project-buttons">
+                        <img src="icons/star-plus-outline.svg" />
+                        <img src="icons/eye-plus-outline.svg" />
+                        <img src="icons/source-fork.svg" />
+                    </div>
                 </div>
                 <div class="project">
                     <div class="project-title">Holiday Party</div>
                     <div class="project-description">Planned by the party planning committee</div>
-                    <img src="icons/star-plus-outline.svg" />
-                    <img src="icons/eye-plus-outline.svg" />
-                    <img src="icons/source-fork.svg" />
+                    <div class="project-buttons">
+                        <img src="icons/star-plus-outline.svg" />
+                        <img src="icons/eye-plus-outline.svg" />
+                        <img src="icons/source-fork.svg" />
+                    </div>
                 </div>
             </div>
-            <div class="announcements">
-                <div class="announcement">
-                    <div class="announcement-title">Ann1</div>
-                    <div class="announcement-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, accusantium?</div>
-                </div>
-                <div class="announcement">
-                    <div class="announcement-title">Ann2</div>
-                    <div class="announcement-description">Lorem ipsum dolor sit amet consectetur.</div>
-                </div>
-                <div class="announcement">
-                    <div class="announcement-title">Ann3</div>
-                    <div class="announcement-description">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+            <div class="announcements-content">
+                <div class="announcements-header">Announcements</div>
+                <div class="announcements">
+                    <div class="announcement">
+                        <div class="announcement-title">Ann1</div>
+                        <div class="announcement-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, accusantium?</div>
+                    </div>
+                    <div class="announcement">
+                        <div class="announcement-title">Ann2</div>
+                        <div class="announcement-description">Lorem ipsum dolor sit amet consectetur.</div>
+                    </div>
+                    <div class="announcement">
+                        <div class="announcement-title">Ann3</div>
+                        <div class="announcement-description">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                    </div>
                 </div>
             </div>
-            <div class="trending">
-                <div class="trending-profile">
-                    <img class="trending-profile-icon" />
-                    <div class="trending-profile-handle">@pro1</div>
-                    <div class="trending-profile-name">Some Times Correct</div>
-                </div>
-                <div class="trending-profile">
-                    <img class="trending-profile-icon" />
-                    <div class="trending-profile-handle">@pro2</div>
-                    <div class="trending-profile-name">Often The Best</div>
-                </div>
-                <div class="trending-profile">
-                    <img class="trending-profile-icon" />
-                    <div class="trending-profile-handle">@pro3</div>
-                    <div class="trending-profile-name">Tastes Like Chicken</div>
-                </div>
-                <div class="trending-profile">
-                    <img class="trending-profile-icon" />
-                    <div class="trending-profile-handle">@pro4</div>
-                    <div class="trending-profile-name">Makes Life Easy</div>
+            <div class="trending-content">
+                <div class="trending-header">Trending</div>
+                <div class="trending">
+                    <div class="trending-profile">
+                        <div class="trending-profile-icon">
+                            <svg width="100%" height="100%">
+                                <circle cx="50%" cy="50%" r="10%" stroke="black" stroke-width="3" fill="purple" />
+                            </svg>
+                        </div>
+                        <div class="trending-profile-handle">@pro1</div>
+                        <div class="trending-profile-name">Some Times Correct</div>
+                    </div>
+                    <div class="trending-profile">
+                        <div class="trending-profile-icon">
+                            <svg width="100%" height="100%">
+                                <circle cx="50%" cy="50%" r="10%" stroke="black" stroke-width="3" fill="blue" />
+                            </svg>
+                        </div>
+                        <div class="trending-profile-handle">@pro2</div>
+                        <div class="trending-profile-name">Often The Best</div>
+                    </div>
+                    <div class="trending-profile">
+                        <div class="trending-profile-icon">
+                            <svg width="100%" height="100%">
+                                <circle cx="50%" cy="50%" r="10%" stroke="black" stroke-width="3" fill="green" />
+                            </svg>
+                        </div>
+                        <div class="trending-profile-handle">@pro3</div>
+                        <div class="trending-profile-name">Tastes Like Chicken</div>
+                    </div>
+                    <div class="trending-profile">
+                        <div class="trending-profile-icon">
+                            <svg width="100%" height="100%">
+                                <circle cx="50%" cy="50%" r="10%" stroke="black" stroke-width="3" fill="yellow" />
+                            </svg>
+                        </div>
+                        <div class="trending-profile-handle">@pro4</div>
+                        <div class="trending-profile-name">Makes Life Easy</div>
+                    </div>
                 </div>
             </div>
         </div>
