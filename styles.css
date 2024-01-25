@@ -1,33 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin:0;
     padding:0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .container {
     display: grid;
-    grid-template: auto 4fr / 1fr 4fr
+    grid-template: auto 4fr / 1fr 5fr
 }
 
 .header {
     box-shadow: 0px 3px 3px 0px lightgrey;
     grid-column: 2 / 3;
     display: grid;
-    grid-template: 2fr 3fr / 3fr 2fr
-
-
+    grid-template: 2fr 3fr / 3fr 2fr;
+    padding: 10px;
 }
 
 .sidebar {
     background-color: rgb(108, 185, 182);
     color: white;
     grid-row: 1 / 3;
-    display: grid;
-    grid-template: repeat(9, 40px) / 40px 200px;
+    /* display: grid;
+    grid-template: repeat(9, 40px) / 40px 200px; */
 }
 
-.sidebar>img  {
+.sidebar-top, .sidebar-middle, .sidebar-end {
+    display: grid;
+    grid-template-columns: 40px 200px;
+    padding: 20px;
+    gap: 10px;
+
+    align-items: center;
+}
+
+.sidebar-top>img, .sidebar-middle>img, .sidebar-end>img  {
     width: 25px;
     height: 25px;
+    
 }
 
 object {
@@ -40,20 +52,41 @@ object {
 .search {
     display: grid;
     grid-template: 30px / 30px 300px;
+    align-items: center;
 }
 
-.search-bar {
-    border: 1px solid black
+.search>img {
+    width: 20px;
+    height: auto;
 }
+
+.search-bar>form {
+    width: auto;
+}
+
+.search-bar>input {
+    width: 500px;
+    height: 25px;
+    background-color: lightgrey;
+    border-radius: 25px;
+    border-style: none;
+}
+
+
 
 .profile {
     display: grid;
     grid-template: 30px / 30px 50px 100px;
     justify-content: right;
+    align-items: center;
 }
 
 .action-buttons {
     justify-self: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    align-items: center;
 }
 
 .action-buttons>button {
@@ -72,6 +105,7 @@ object {
 .greeting {
     display: grid;
     grid-template: 25px 50px / 75px 200px;
+    
 }
 
 .greeting .profile-icon {
@@ -84,6 +118,7 @@ object {
 
     font-weight: bold;
     font-size: .6rem;
+
 
 }
 
@@ -99,11 +134,9 @@ object {
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
     background-color: rgba(211, 211, 211, 0.452);
-    gap: 10px;
-    padding: 10px;
+    gap: 20px;
+    padding: 10px 20px 10px 20px;
 }
-
-
 
 .your-projects {
     grid-row: 1/3;
@@ -129,8 +162,6 @@ object {
     display: grid;
     grid-template-rows: auto 3fr 1fr;
 
-
-
 }
 
 .project-title {
@@ -143,7 +174,11 @@ object {
 }
 
 .project-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 25px);
+    gap: 5px;
     justify-self: right;
+    align-self: end;
 }
 
 .announcements-content {
@@ -215,3 +250,4 @@ object {
 .project, .trending, .announcements {
     box-shadow: 3px 3px 5px lightgrey;
 }
+
