@@ -7,8 +7,10 @@
 }
 
 .container {
+ 
     display: grid;
-    grid-template: auto 4fr / 1fr 5fr
+    grid-template: auto 4fr / 200px 5fr;
+    height: 100vh;
 }
 
 .header {
@@ -51,8 +53,9 @@ object {
 
 .search {
     display: grid;
-    grid-template: 30px / 30px 300px;
+    grid-template: 30px / 30px 1fr;
     align-items: center;
+
 }
 
 .search>img {
@@ -61,18 +64,18 @@ object {
 }
 
 .search-bar>form {
-    width: auto;
+    width: 100%;
 }
 
 .search-bar>input {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 25px;
-    background-color: lightgrey;
+    background-color: rgb(231, 231, 231);
     border-radius: 25px;
     border-style: none;
+    padding-left: 10px;
 }
-
-
 
 .profile {
     display: grid;
@@ -104,13 +107,34 @@ object {
 
 .greeting {
     display: grid;
-    grid-template: 25px 50px / 75px 200px;
+    grid-template: 25px 45px / 75px 200px;
     
 }
 
 .greeting .profile-icon {
     grid-row: 1 / 3 ;
+
+    display: grid;
+    justify-items: center;
+    align-items: top;
 }
+
+.profile .profile-icon {
+    display: grid;
+    justify-items: center;
+    
+}
+
+.greeting .profile-icon > img {
+    height: 50px;
+    width: 50px;
+}
+
+.profile .profile-icon > img {
+    height: 40px;
+    width: 40px;
+}
+
 
 .greeting .salutation {
     grid-column: 2 / 3 ;
@@ -118,8 +142,9 @@ object {
 
     font-weight: bold;
     font-size: .6rem;
-
-
+    
+    display: grid;
+    align-items: end;
 }
 
 .greeting .my-name {
@@ -127,12 +152,11 @@ object {
     grid-row: 2 / 3;
 
     font-weight: bold;
-
 }
 
 .content {
     display: grid;
-    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template: 1fr 1fr / 3fr 250px;
     background-color: rgba(211, 211, 211, 0.452);
     gap: 20px;
     padding: 10px 20px 10px 20px;
@@ -143,14 +167,21 @@ object {
     gap: 10px;
 
     display: grid;
-    grid-template: auto repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-rows: 25px 1fr;
+}
+
+.all-projects {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 300px));
+    /* grid-auto-rows: min-content; */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .projects-header {
-    grid-column: 1/3;
+    grid-column: 1 / -1;
     padding-top: 10px;
     font-weight: bold;
-
 }
 
 .project {
@@ -160,7 +191,7 @@ object {
     padding: 20px 10px;
 
     display: grid;
-    grid-template-rows: auto 3fr 1fr;
+    grid-template-rows: 25px 1fr 25px;
 
 }
 
@@ -169,8 +200,12 @@ object {
 }
 
 .project-buttons>img {
-    width:25px;
-    height:25px;
+    max-width:25px;
+    max-height:25px;
+}
+
+.project-description {
+    /* overflow: scroll; */
 }
 
 .project-buttons {
@@ -183,30 +218,31 @@ object {
 
 .announcements-content {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-auto-rows: max-content;
 }
 
 .announcements-header {
     grid-row: 1 / 2;
-    padding: 10px 0px;
+    padding-top: 10px;
     font-weight: bold;
-
 }
 
 .announcements {
     grid-row: 2 / 3;
     background-color: white;
-    padding: 20px;
+    padding: 0px 20px 0px 20px;
     display: grid;
     border-radius: 10px;
 }
 
 .announcements > :not(:last-child) {
     border-bottom: 2px solid lightgrey;
+    
 }
 
 .announcement {
-    padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .announcement-title {
@@ -215,13 +251,12 @@ object {
 
 .trending-content {
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: 25px 1fr;
 }
 
 .trending-header {
-    padding: 10px 0px;
+    padding: 0px 0px;
     font-weight: bold;
-
 }
 
 .trending {
@@ -229,18 +264,31 @@ object {
     background-color: white;
 
     display: grid;
+    gap: 10px;
     border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+
+    align-content: space-around;
 }
 
 .trending-profile {
     display: grid;
-    grid-template: auto 1fr / 50px 1fr;
+    grid-template: 25px 25px / 50px 1fr;
 }
 
 .trending-profile-icon {
     grid-column: 1/2;
     grid-row: 1/3;
- 
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.trending-profile-icon > img {
+    height: 30px;
+    width: 30px;
 }
 
 .trending-profile-handle {
