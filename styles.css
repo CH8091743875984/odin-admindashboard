@@ -6,6 +6,11 @@
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+:root {
+    --main-accent: rgb(0, 147, 67);
+    --second-accent: rgb(240,0,35);
+}
+
 .container {
  
     display: grid;
@@ -22,7 +27,7 @@
 }
 
 .sidebar {
-    background-color: rgb(108, 185, 182);
+    background-color: var(--main-accent);
     color: white;
     grid-row: 1 / 3;
     /* display: grid;
@@ -93,7 +98,7 @@ object {
 }
 
 .action-buttons>button {
-    background-color: rgb(108, 185, 182);
+    background-color: var(--main-accent);
     color: white;
     height: 30px;
     border-radius: 20px;
@@ -156,7 +161,7 @@ object {
 
 .content {
     display: grid;
-    grid-template: 1fr 1fr / 3fr 250px;
+    grid-template: 1fr / 3fr 250px;
     background-color: rgba(211, 211, 211, 0.452);
     gap: 20px;
     padding: 10px 20px 10px 20px;
@@ -186,7 +191,7 @@ object {
 
 .project {
     background-color: white;
-    border-left: 7px solid gold;
+    border-left: 7px solid var(--second-accent);
     border-radius: 10px;
     padding: 20px 10px;
 
@@ -205,7 +210,11 @@ object {
 }
 
 .project-description {
-    /* overflow: scroll; */
+    overflow: scroll;
+    font-size: .8rem;
+    
+    overflow: scroll;
+
 }
 
 .project-buttons {
@@ -216,8 +225,15 @@ object {
     align-self: end;
 }
 
+
+.right-sidebar {
+    /* determine why rows in trending are increasing when view is squeezed */
+}
+
 .announcements-content {
     display: grid;
+    grid-template-rows: 25px;
+    gap: 10px;
     grid-auto-rows: max-content;
 }
 
@@ -249,13 +265,17 @@ object {
     font-weight: bold;
 }
 
+.announcement-description {
+    font-size: .9rem;
+}
+
 .trending-content {
     display: grid;
     grid-template-rows: 25px 1fr;
+    margin-top: 10px;
 }
 
 .trending-header {
-    padding: 0px 0px;
     font-weight: bold;
 }
 
@@ -266,7 +286,7 @@ object {
     display: grid;
     gap: 10px;
     border-radius: 10px;
-    padding: 10px 0px 10px 0px;
+    padding: 10px ;
 
     align-content: space-around;
 }
@@ -293,6 +313,10 @@ object {
 
 .trending-profile-handle {
     font-weight: bold;
+}
+
+.trending-profile-name {
+    font-size: .9rem;
 }
 
 .project, .trending, .announcements {
